@@ -1,5 +1,5 @@
-baseURL = "https://peterampazzo.github.io/project-website-template/"
-title = "Project Title"
+baseURL = "https://github.com/DanielHolmelund/the-political-debate-in-britain-illuminated-through-quantitative-methods"
+title = "Quantitative Analysis of the British Parliament"
 description = "This is a project description"
 relativeURLs = true
 theme = "theme" 
