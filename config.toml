@@ -4,10 +4,10 @@ description = "This is a project description"
 relativeURLs = true
 theme = "theme" 
 [params]
-    authors = ["Henrik Nielsen", "Inga Jensen", "Mikkel Andersen"]
+    authors = ["Daniel Holmelund", "Christian Djurhuus", "Felix Burmester"]
     notebook = "/explainer-notebook.html"
-    data = "https://drive.google.com"
-    github = "https://github.com/peterampazzo/project-website-template"
+    data = "https://www.clarin.si/repository/xmlui/handle/11356/1432"
+    github = "https://github.com/DanielHolmelund/the-political-debate-in-britain-illuminated-through-quantitative-methods"
     [[params.nav]]
         label = "Data"
         link = "/data-description"
