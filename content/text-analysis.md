@@ -3,13 +3,32 @@ title: Text analysis
 prev: network-analysis
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. In nulla tellus, tempus sed lobortis quis, venenatis ac ante. Maecenas accumsan augue ultricies metus hendrerit, in ultrices urna fringilla. Suspendisse lobortis egestas magna, sit amet fermentum ligula tincidunt vitae. Suspendisse cursus non dui a vulputate. Cras vestibulum vulputate enim eu placerat. Ut scelerisque semper justo sit amet auctor. Aliquam sit amet iaculis tortor.
-
-Should be an image here:
+**Temporal Analysis of the Topics Adressed in the British Parliament**
+<br />
+The purpose of the following analysis is to investigate how certain political topics have evovled throug time.
+A graph that illustrates the number of occurrences of a specific topic through time was created as an attempt to investigate how frequent the British Parliament address different topics: 
 {{< plotly obj="lexicalDispersionPlot" >}}
 
-> Nulla in justo hendrerit, tincidunt mauris et, porta est. Donec in leo vitae est ultrices dapibus id nec tortor. Maecenas ut ipsum eu nisl cursus facilisis scelerisque eu ex. Aliquam euismod elementum libero, at vehicula ipsum.
 
-Nam commodo lorem quis tortor euismod, ut ultrices orci aliquet. Sed eget dui nec sem ullamcorper convallis id nec ante. Aliquam ultricies a massa quis semper. Donec suscipit augue ut sagittis hendrerit. Aliquam erat volutpat. Proin aliquet maximus nibh, id aliquet justo maximus at. Sed accumsan ante id aliquam pellentesque. Aliquam nec hendrerit quam. Suspendisse maximus eros sollicitudin, accumsan turpis eu, blandit nulla. Nunc lorem elit, molestie at libero gravida, placerat consectetur ante. Sed tincidunt viverra tellus a vehicula.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit lobortis turpis. Praesent porttitor, turpis eu posuere molestie, sem dolor scelerisque sapien, eu aliquet ante felis ac metus. Pellentesque semper ultricies urna. Aenean auctor, turpis ut convallis ultrices, eros tellus bibendum risus, eu varius velit ante et diam. In suscipit lorem orci, eu placerat nibh dignissim ut. Nullam consequat nisl dui, in ornare risus porttitor sed. Integer vitae nibh semper purus ultrices rutrum. Pellentesque non diam ornare, imperdiet elit a, tempus lacus. Suspendisse viverra euismod dapibus.
+
+**Characterizing Words of the Speeches From Each Party**
+<br />
+The following section will attempt to discover words that characterize each of the political parties in the British Parliament using the transcripts described in the Data section (Insert ref to data). More specifically, the weighting scheme TF-IDF will be used to find words/terms that describe the speeches conducted by each party. In the following analysis, only a subset of the parties has been chosen namely the Liberal Democrat, Conservative, Labour, Scottish National Party, UK Independence Party and the Green Party (WordClouds for all parliaments can be found here).
+
+Liberal Democrat             |  Conservative
+:-------------------------:|:-------------------------:
+<img src="/images/wordcloud_Liberal Democrat.pdf" width="600" />  |  <img src="/images/wordcloud_Conservative.pdf" width="600" />
+
+Labour             |  Scottish National Party
+:-------------------------:|:-------------------------:
+<img src="/images/wordcloud_Labour.pdf" width="600" /> | <img src="/images/wordcloud_Scottish_National_Party.pdf" width="600" />
+
+UK Independence Party             |  Green Pary
+:-------------------------:|:-------------------------:
+<img src="/images/wordcloud_UK Independence Party.pdf" width="600" /> | <img src="/images/wordcloud_Green Party.pdf" width="600" />
+
+
+
+
+
