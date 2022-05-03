@@ -42,12 +42,13 @@ This frequency is normalised across topics meaning that when one topic becomes m
 
 {{< plotly obj="heatmap" >}}
 
-The heatmap shows the correlation coefficients between all topics. We see that *vaccin(e)*, *pandem(ic)* and *test* are strongly, positively correlated. But we can also see that *educ(ation)*, *defenc(e)*, *transport(ation)* and more are negatively correlated with *pandem(ic)*. This verifies what we saw earlier. Other trends also come to light now; *immigr(ation)*, *defenc(e)*, *welfar(e)*, *employ(ment)* and *crime* are all positively correlated suggesting that these topics tend to be discussed in the same months. *environ(ment)* is positively correlated with topics such as *transport* and *health*, and negatively correlated with *tax* and *welfar(e)*.
+The heatmap shows the correlation coefficients between all topics. We see that *vaccin(e)*, *pandem(ic)* and *test* are strongly, positively correlated. But we can also see that *educ(ation)*, *defenc(e)*, *transport(ation)* and more are negatively correlated with *pandem(ic)*. This verifies what we saw earlier. Other trends also come to light now; *immigr(ation)*, *defenc(e)*, *welfar(e)*, *employ(ment)* and *crime* are all positively correlated suggesting that these topics tend to be discussed in the same months. *environ(ment)* is positively correlated with topics such as *transport* and *health*, and negatively correlated with *tax* and *welfar(e)*. The plot below shows the same trend.
 
-But more interestingly, we can through this data begin to see which topics are getting more important and which topics are not.
+{{< plotly obj="corrplot" >}}
+
+However, now we can also see the year of which the points lie. *tax* seems to be talked less and less about, while *environ(ment)* seems to become more and more debated in parliament. This is shown in the plot below. It is a scatter plot with a linear regression fitted across all points by minimizing the squared distance to the line from  all of the points. This means that it is the linear line that best suits the data, and the direction of which it travels tells us a lot about what the overall trend looks like.
 
 {{< plotly obj="ols" >}}
 
 Here we see a general dedcrease in *tax* and an increase in *environ(ment)*. *defenc(e)* is also on the decrease, suggesting that the climate in and around Britain has been quite peaceful for some years (pre-Russian hostility). *educ(ation)* also gets lower and lower attention in parliament. This suggests either that schools are doing well and need less care from parliament or that education as a topic to be discussed is simply beginning to decline.  
-
 
