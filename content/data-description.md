@@ -61,9 +61,12 @@ After this initial analysis of the data and its structure some of the ten charac
 For the basis of the sentiment analysis of the speeches in parliament, a dictionary-based sentiment analysis was applied. Here a predefined dictionary with happiness scores associated with the 10222 most commonly used words in the English dictionary is used to explore if sentiment analysis can highlight any underlying structures of the British parliament. The average happiness score for each day was found by using the following formula:
 
 $$h_{avg}(T)=\sum_{i=1}^{N}h_{avg}(w_i)p_i$$
-where $p_i = \frac{f_i}{\sum_{j=1}^{N}f_j}$ and $f_i$ is the frequency of the i'th word $w_i$.
 
-For more information the method used can be found [here](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0026752).
+<img src="https://render.githubusercontent.com/render/math?math=p_i = \frac{f_i}{\sum_{j=1}^{N}f_j}">
+
+where <img src="https://render.githubusercontent.com/render/math?math=p_i = \frac{f_i}{\sum_{j=1}^{N}f_j}"> and $f_i$ is the frequency of the i'th word $w_i$.
+
+For more information about this method can be found [here](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0026752).
 
 Sentiment analysis is an interesting topic that can illuminate how discourses evolve and show how different groups feel about certain topics. Therefore, the following section compares the two major parties and how their sentiment changes over time.
 
@@ -74,8 +77,20 @@ As seen from the above figure, solely looking at the average happiness scores do
 
 # **Wordshifts**
 
+From the previous section, it is clear that the sentiment from the British parliament with a high temporal resolution does not yield any great insights. However, if we were to dive into certain dates for important events and compare the sentiment with the previous few days, would that yield any information about the sentiment in British politics?
+
+For this, the date of the first COVID lockdown in Great Britain is investigated.
+
 <p float="left">
   <img src="/images/wordshift_labour.pdf" width="400" />
   <img src="/images/wordshift_con.pdf" width="400" />
 </p>
+
+Here it is seen that both parties are slightly down in happiness scores compared with the 14 days before it is referenced against. But what is interesting is perhaps not the score itself, but the change in word frequency that their wordshifts uncovers. 
+
+For negative words that emerge more than the usual, bill is at the top for both parties. This is a natural finding as legislators are proposing and discussing bills that can relieve the situation. Another series of negative words that are up are words describing the consequences of the pandemic, like "death", "emergency", "distancing", "crisis" etc.  
+
+The positive words (right side of the figure) tell how the politicians for the respective parties address this time of crisis and how they wish to inspire hope and unity in the population. 
+
+None of these findings might be truly surprising, since most of us understand the context around the COVID handling from a personal experience. However, this highlights the strengths of wordshifts that can illuminate landmark events and how these events affect the language.
 
