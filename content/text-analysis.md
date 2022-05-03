@@ -28,7 +28,7 @@ Thus, TF-IDF assumes that a term's importance is proportional to how frequent th
 | doc 2 | 0 | 0.0008 | 1.58 | 0.005 |
 | doc 3 | 0.17 |0.003 | 0.52 | 0.006 |
 
-Notice how the term *minister* is now associated with low importance for every document in the corpus in contrary to previously. In the following, the TFIDF weighting scheme will be used to find important terms that describe the speeches conducted by each party. The analysis will be limited to a subset of the parties, namely the Liberal Democrat, Conservative, Labour, Scottish National Party, UK Independence Party and the Green Party (WordClouds for all parliaments can be found here). The WordClouds are depicted as follows:
+Notice how the term *minister* is now associated with low importance for every document in the corpus in contrary to previously. In the following, the TFIDF weighting scheme will be used to find important terms that describe the speeches conducted by each party. The analysis will be limited to a subset of the parties, namely the Liberal Democrat, Conservative, Labour, Scottish National Party, UK Independence Party and the Green Party. Instead of presenting all the TF-IDF weighted words as presented in the above term-document matrix, a common visualization method is the usage of WordClouds. A WordCloud usually consist of a subset of the words present in a document, and the size of the words is proportional with the TF-IDF weight. The WordClouds of the selected political parties are depicted as follows:
 
 Liberal Democrat             |  Conservative
 :-------------------------:|:-------------------------:
@@ -54,7 +54,11 @@ Lastly, the Green Party is known for its environmental ideology and its progress
 
 **Similarity Between Parties (TF-IDF & Cosine Similarity)**
 
-The TF-IDF weighting scheme can also be utilized to find similar documents. Hence, it can be used to find similar and dissimilar parties with the usage of cosine similarity.(får teknisk??) The following illustration depicts the cosine similarity between speeches from each party. Note that a high value is associated with a high similarity:
+The TF-IDF weighting scheme can also be utilized to approximate similarity between documents. Once the weighted term-document matrix has been created different similarity measures can be used to compute similarity between documents. One of the most common similarity measures are cosine similarity, which can be calculated as follows:
+
+$$cosine(\textbf{v},\textbf{w}) = \frac{\textbf{v} \cdot \textbf{w}}{|\textbf{v}||\textbf{w}|}$$
+
+where **v** and **w** are the TF-IDF (vector) representation of document v and w. All the pairwise cosine similarities of all documents in the corpus can then be computed to achieve similarity measures between all documents. Thus, using the 47 documents for each party, the similarity between all parties can be approximated by determining the cosine similarity between the TF-IDF representations of the grouped speeches. The following illustration depicts the cosine similarity between speeches from each party. Note that a high value is associated with a high similarity:
 
 <img src="/images/Party_similarity.pdf" width="600" />
 
