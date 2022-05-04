@@ -12,9 +12,9 @@ theme = "theme"
         label = "Data"
         link = "/data-description"
     [[params.nav]]
-        label = "Network"
-        link = "/network-analysis"
-    [[params.nav]]
         label = "Text"
         link = "/text-analysis"
+    [[params.nav]]
+        label = "Network"
+        link = "/network-analysis"
 
