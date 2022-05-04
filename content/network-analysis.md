@@ -26,13 +26,6 @@ As previously mentioned, the first step in the network modelling was to create a
 It can be seen that there are a few nodes that are not connected to anything. These are also known as singletons. This is because of how we assign edges. If a parliament member (pm) talks equally much about all topics, there will not be a topic of which he/she talks more about than all the other topics. Therefore, our code will not assign an edge to a topic. It is, however, possible for a pm to have more than one edge assigned to them. These nodes can be seen as "bridges" between topics in the network. These bridges will thereby connect topics which actually groups similar topics together in the network. We can for example see see *eu* and *legisl(ation)* are connected by multiple bridges and are therefore placed near each other in the network.
 We can also see topics related to *health* by this measure include *test*, *pandem(ic)*, *vaccin(e)* and *educ(ation)*.
 
-Naturally all PM's adresses all the topics to some degree. Therefore, the thresholding then defining the network have a high impact on the structure of the network. However, as seen from the degree histrogram for the projected network, each node still have a very high average degree. 
-
-<img src="/images/degree_hist.png" width="600" />
-
-The clustering coefficent for the projected graph is: 0.80. The clustering coefficent can be seen as a measurement for local link density in the network ([source](http://networksciencebook.com/chapter/2#clustering)). With a clustering coefficent of 0.80 it is implied that two neighbors of a certain node have 80 % chance of being connected. This is seen from the network visualisation that consists of many locally tightly connected clusters with *bridges* of PM's between them that connects them into a global structure. 
-
-
 ### **Projected Networks**
 <br />
 Subsequently, the projected network consisting of the members of the Parliament was determined, using the previously described approach, to model the interaction between Parliament members. The projection yielded the following members of the Parliament network:
@@ -84,20 +77,20 @@ Given that the Louvain algorithm is stochastic to a certain degree, the detected
 $$I(Louvain\ partition,\ Topics\ partition) = 0.30 \pm 0.001$$
 
 
-To assess whether or not the estimated normalized mutual information is significant, a randomization test will be conducted. The randomization is conducted by randomly shuffling the topic partition, and the normalized mutual information between the Louvain communities and the random partition is then computed. To achieve a measure of uncertainty, the described procedure is repeated a thousand times, which yields the following illustration:
+To assess whether or not the estimated normalized mutual information is significant, a randomisation test will be conducted. The randomization is conducted by randomly shuffling the topic partition, and the normalised mutual information between the Louvain communities and the random partition is then computed. To achieve a measure of uncertainty, the described procedure is repeated a thousand times, which yields the following illustration:
 
-(Insert randomization image here)
+<img src="/images/NMIs.png" width="600" />
 
-(Remember to adjust the text below with results from randomization test)
-Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm. However, it also becomes evident that not all the information of one partition can be described using the other partition. Consequently, an investigation of the topics within the detected Louvain communities could be interesting to elucidate if any pattern emerges within the community members. One approach would simply be to compute the normalized topic frequency distribution within each community:
+
+Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm and that it is statistically significant. However, it also becomes evident that not all the information of one partition can be described using the other partition. Consequently, an investigation of the topics within the detected Louvain communities could be interesting to elucidate if any pattern emerges within the community members. One approach would simply be to compute the normalized topic frequency distribution within each community:
 
 <img src="/images/comm_hist_0.png" width="800" />
 
-The topic frequency distribution within community 0 demonstrates that the majority of members are associated with the topic *health*.
+As mentioned before, community 0 consists of *health*-related topics such as *vaccin(e)*, *test* and *pandem(ic)*.
 
 <img src="/images/comm_hist_1.png" width="800" />
 
-Subsequently, the frequency distribution of community 1 is mainly dominated by the topic *legislation* followed by *EU*.
+Subsequently, the frequency distribution of community 1 is mainly dominated by the topic *legislation* followed by *EU* which probably corresponds to the large mixed cluster in the previous network plot.
 
 <img src="/images/comm_hist_2.png" width="800" />
 
@@ -107,14 +100,17 @@ The topic frequencies within community 2 are more various, with the most frequen
 
 Lastly, the topic distribution of community 3 demonstrates that the members of the community are mainly associated with the topic *EU*.
 
-Subsequently, TF-IDF can be used to generate WordClouds related to each detected community as previously done in the [text analysis section](http://localhost:1313/DanielHolmelund/the-political-debate-in-britain-illuminated-through-quantitative-methods/text-analysis/). One feasible approach for computing the TF-IDF is to group the speeches of the Parliament members, who are within the same community as a single document. Thereby, resulting in four documents, one for each community. Furthermore, the IDF is computed on the entire corpus to achieve reasonable estimates. Subsequently, the TF-IDF representations of the four documents are computed with the IDF estimate, which are computed on the entire corpus. The described approach yields the following WordClouds for each community:
+Subsequently, TF-IDF can be used to generate WordClouds related to each detected community as previously done in the [text analysis section](http://localhost:1313/DanielHolmelund/the-political-debate-in-britain-illuminated-through-quantitative-methods/text-analysis/). One feasible approach for computing the TF-IDF is to group the speeches of the Parliament members, who are within the same community as a single document. Thereby, resulting in four documents, one for each community. Furthermore, the IDF is computed on the entire corpus to achieve reasonable estimates. Subsequently, the TF-IDF representations of the four documents are computed with the IDF estimate, which is computed on the entire corpus. The described approach yields the following WordClouds for each community:
 
 Community 0             |  Community 1
 :-------------------------:|:-------------------------:
 <img src="/images/wordcloud_0.png" width="600" /> | <img src="/images/wordcloud_1.png" width="600" />
 
-
+Here we see words like *health*, *care*, *servic(e)* and *state* in the WordCloud for community 0 which sound like they fit the overall *health care* theme. Community 1 consists of words like *legisl(ation)*, *eu* and *law* which also seems to fit the *legislation / eu* theme.
 
 Community 2            |  Community 3
 :-------------------------:|:-------------------------:
-<img src="/images/wordcloud2.png" width="600" /> | <img src="/images/wordcloud3.png" width="600" />
+<img src="/images/wordcloud_2.png" width="600" /> | <img src="/images/wordcloud_3.png" width="600" />
+
+Community 2 is the mixed community, and that shows in its WordCloud. Words like *import*, *countri(es)*, and *local* seem to fit topics like *economi(cs)*, *world*, and *educ(ation)*. Finally, we see community 3 which mostly contains the topic, *eu*. It contains words like *eu*, *trade*, *vote* and *import*.
+
