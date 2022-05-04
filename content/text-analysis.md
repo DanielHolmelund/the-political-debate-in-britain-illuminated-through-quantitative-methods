@@ -89,10 +89,11 @@ The following part of the analysis will attempt to investigate how different pol
  'test']
 
 
-Initially, the topics' evolution will be illustrated using an altered version of a lexical dispersion plot focussing on how the frequencies have changed throughout the year 2021:
-{{< plotly obj="lexicalDispersionPlot" >}} 
+Initially, the topics' evolution will be illustrated using an altered version of a lexical dispersion plot focussing on how the frequencies have changed throughout the year 2020:
 
-The size of each marker in the illustration corresponds to how frequent a topic has been mentioned on the specific day. Hence, the visualization demonstrates that ....
+<img src="/images/LexicalDispersionPlot.png" width="600" />
+
+The size of each marker in the illustration corresponds to how frequent a topic has been mentioned on the specific day. Hence, the visualization demonstrates that the frequency of some topics are somewhat constant while others are associated with a higher variance. For instance, the frequency of the topic *vaccine* appears to have had an increase during the end of 2020, while topics such *health* and *eu* are associated with a constant high frequency. 
 
 Subsequently, the variation of frequencies will be investigated throughout the entire timeframe in the corpus (2015-2021). Furthermore, we decided to conduct stemming on the topics to ensure that different inflexions of the topics map to the same topic. Thus, we counted the frequency of each topic for a given month and normalised the frequency according to the sum of the topic frequencies of that given month. The frequencies are illustrated in the following illustration, where each point in the plot corresponds to a normalised topic frequency:
 
