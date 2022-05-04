@@ -117,4 +117,4 @@ Community 0             |  Community 1
 
 Community 2            |  Community 3
 :-------------------------:|:-------------------------:
-<img src="/images/wordcloud2.png" width="600" /> | <img src="/images/wordcloud3.png" width="600" />
+<img src="/images/wordcloud_2.png" width="600" /> | <img src="/images/wordcloud_3.png" width="600" />
