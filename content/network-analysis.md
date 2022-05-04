@@ -43,11 +43,11 @@ The annotations of each node are determined by using the edge weights in the ori
 
 We see the same trends as we saw in the bipartite network: there tend to form groups/communities which contain similar topics. However, it is more visible from this plot which communities are formed. *defenc(e)* is closely related to *world*, *tax* to *pension* and *legisl(ation)*, and *eu* to *legisl(ation)* and *economi(cs)*. The plot also tells us something about pms and their neighbours. The closer the distance between two pms, the more topics of interest they share. This means that the labeled version of the plot tells us which politicians are similar to each other with regards to topic mentions (not opinions).
 
-Naturally all PM's adresses all the topics to some degree. Therefore, the thresholding when defining the network have a high impact on the structure of the network. However, as seen from the degree histrogram for the projected network, each node still have a very high average degree meaning that the network is associated with a high inter- or intra-connectedness.
+Naturally, all pms adress all the topics to some degree. Therefore, the thresholding when defining the network have a high impact on the structure of the network. However, as seen from the degree histrogram for the projected network, each node still have a very high average degree meaning that the network is associated with a high inter- or intra-connectedness.
 
 <img src="/images/degree_hist.png" width="600" />
 
-The average clustering coefficent for the projected graph is: 0.80. This coefficent can be seen as a probability that two random nodes in the network are linked to eachother ([source](http://networksciencebook.com/chapter/2#clustering)). This is seen from the network visualisation that consists of many local, tightly connected clusters with *bridges* of PM's between them that connects them into a global node structure. Additional many links also span across the clusters, resulting in the high average clustering coefficent. 
+The average clustering coefficent for the projected graph is: 0.80. This coefficent can be seen as a probability that two random nodes in the network are linked to eachother ([source](http://networksciencebook.com/chapter/2#clustering)). This is seen from the network visualisation that consists of many local, tightly connected clusters with *bridges* of pms between them that connects them into a global node structure. Additional many links also span across the clusters, resulting in the high average clustering coefficent. 
 
 
 (Comment on network)
@@ -61,7 +61,7 @@ In this section, we use the Louvain algorithm in order to find the best possible
 
 <img src="/images/comm_size.png" width="600" />
 
-The size of each cluster can be seen in the barplot above. It shows us that there is not a cluster with a relatively small number of nodes. It means that the network is quite well connected because we do not see a smaller community than we do. The network can be seen below.
+The size of each cluster can be seen in the barplot above. It shows us that there is not a cluster with a relatively small number of nodes. This means that the network is quite well connected because we do not see a smaller community than we do. The network can be seen below.
 
 <img src="/images/louvain_proj_mp.png" width="600" />
 
