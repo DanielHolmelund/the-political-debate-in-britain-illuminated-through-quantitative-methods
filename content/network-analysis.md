@@ -22,7 +22,7 @@ The following sections will focus on network modelling, community detection, and
 <br />
 As previously mentioned, the first step in the network modelling was to create a bipartite network. The relations between members of the Parliament and the chosen topics were determined by assessing which topics a given member mentions sufficiently frequent in their speeches. This was accomplished by simply counting the frequency distribution of topics for each Parliament member and using the standard deviation as a threshold for determining when a topic is mentioned sufficiently frequent. Hence, for each member of the Parliament, an edge is drawn from the member to a topic, if the frequency of the topic is more than one standard deviation away from the average topic frequency for that particular Parliament member. The described approach yields the following network:
 
-(Insert image of bipartite network here)
+<img src="/images/BG.png" width="600" />
 
 (Comment on network)
 
@@ -32,7 +32,9 @@ As previously mentioned, the first step in the network modelling was to create a
 <br />
 Subsequently, the projected network consisting of the members of the Parliament was determined, using the previously described approach, to model the interaction between Parliament members. The projection yielded the following network:
 
-(Insert image of projected network here)
+<img src="/images/proj_mp.png" width="600" />
+
+The annotations of each node are determined by using the edge weights in the original bipartite network and then annotating each Parliament member with the topic associated with the highest edge weight.
 
 (Comment on network)
 
@@ -42,12 +44,18 @@ Subsequently, the projected network consisting of the members of the Parliament 
 
 #### **Community Detection**
 
-(Insert size of community)
-
-(Insert image of network with louvain community annotations)
+<img src="/images/louvain_proj_mp.png" width="600" />
 
 
 #### **Partition Comparison**
+The following section will compare the communities detected by the louvain algorithm with the communities created by using the edge weight between members of the Parliament and the political topics. To conduct the partition comparison, we will use the *normalized mutual information* between the two partitions. Normalized mutual information can be formalized as the following:
+
+$$I_{n}(X;Y)=\frac{I(X;Y)}{\frac{1}{2}H(X)+\frac{1}{2}H(Y)}$$
+
+where X and Y are the partitions being compared and H(.) is the entropy e.g.:
+$$H(Y)=-\sum_{x}p(y)log(p(y)))$$
+
+
 
 (Insert histograms for each partition)
 
