@@ -1,7 +1,7 @@
 ---
 title: Data description
 prev: "/"
-next: network-analysis
+next: text-analysis
 ---
 
 # **What is the data - and where does is come from?**

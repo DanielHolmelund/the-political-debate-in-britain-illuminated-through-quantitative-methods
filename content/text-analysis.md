@@ -1,6 +1,7 @@
 ---
 title: Text analysis
-prev: network-analysis
+prev: data-description
+next: network-analysis
 ---
 **Analysing Speeches From Each Party**
 <br />
