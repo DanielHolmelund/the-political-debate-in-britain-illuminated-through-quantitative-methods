@@ -36,13 +36,13 @@ Subsequently, the projected network consisting of the members of the Parliament 
 
 The annotations of each node are determined by using the edge weights in the original bipartite network and then annotating each Parliament member with the topic associated with the highest edge weight.
 
-(Comment on network)
+We see the same trends as we saw in the bipartite network: there tend to form groups/communities which contain similar topics. However, it is more visible from this plot which communities are formed. *defenc(e)* is closely related to *world*, *tax* to *pension* and *legisl(ation)*, and *eu* to *legisl(ation)* and *economi(cs)*. The plot also tells us something about pms and their neighbours. The closer the distance between two pms, the more topics of interest they share. This means that the labeled version of the plot tells us which politicians are similar to each other with regards to topic mentions (not opinions).
 
-Naturally all PM's adresses all the topics to some degree. Therefore, the thresholding then defining the network have a high impact on the structure of the network. However, as seen from the degree histrogram for the projected network, each node still have a very high average degree. 
+Naturally all PM's adresses all the topics to some degree. Therefore, the thresholding when defining the network have a high impact on the structure of the network. However, as seen from the degree histrogram for the projected network, each node still have a very high average degree meaning that the network is associated with a high inter-connectedness.
 
 <img src="/images/degree_hist.png" width="600" />
 
-The clustering coefficent for the projected graph is: 0.80. The clustering coefficent can be seen as a measurement for local link density in the network ([source](http://networksciencebook.com/chapter/2#clustering)). With a clustering coefficent of 0.80 it is implied that two neighbors of a certain node have 80 % chance of being connected. This is seen from the network visualisation that consists of many locally tightly connected clusters with *bridges* of PM's between them that connects them into a global structure. 
+The clustering coefficent for the projected graph is: 0.80. The clustering coefficent can be seen as a measurement for local link density in the network ([source](http://networksciencebook.com/chapter/2#clustering)). With a clustering coefficent of 0.80 it is implied that two neighbors of a certain node have 80 % chance of being connected. This is seen from the network visualisation that consists of many local, tightly connected clusters with *bridges* of PM's between them that connects them into a global structure. 
 
 #### **Community Detection**
 <img src="/images/comm_size.png" width="600" />
