@@ -24,7 +24,9 @@ As previously mentioned, the first step in the network modelling was to create a
 
 <img src="/images/BG.png" width="600" />
 
-(Comment on network)
+It can be seen that there are a few nodes that are not connected to anything. These are also known as singletons. This is because of how we assign edges. If a parliament member (pm) talks equally much about all topics, there will not be a topic of which he/she talks more about than all the other topics. Therefore, our code will not assign an edge to a topic. It is, however, possible for a pm to have more than one edge assigned to them. These nodes can be seen as "bridges" between topics in the network. These bridges will thereby connect topics which actually groups similar topics together in the network. We can for example see see *eu* and *legisl(ation)* are connected by multiple bridges and are therefore placed near each other in the network.
+
+We can also see topics related to *health* by this measure include *test*, *pandem(ic)*, *vaccin(e)* and *educ(ation)*.
 
 (Write something about properties here)
 
