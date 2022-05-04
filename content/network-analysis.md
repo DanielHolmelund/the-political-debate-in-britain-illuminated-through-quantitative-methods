@@ -41,14 +41,19 @@ Subsequently, the projected network consisting of the members of the Parliament 
 
 
 #### **Community Detection**
-
+<img src="/images/comm_size.png" width="600" />
 (Insert size of community)
 
+<img src="/images/louvain_proj_mp.png" width="600" />
 (Insert image of network with louvain community annotations)
 
 
 #### **Partition Comparison**
-
+<img src="/images/comm_hist_0.png" width="800" />
+bam
+<img src="/images/comm_hist_1.png" width="800" />
+<img src="/images/comm_hist_2.png" width="800" />
+<img src="/images/comm_hist_3.png" width="800" />
 (Insert histograms for each partition)
 
 (Insert wordclouds for each partition)
