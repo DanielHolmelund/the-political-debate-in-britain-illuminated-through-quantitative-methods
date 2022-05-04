@@ -44,11 +44,11 @@ The annotations of each node are determined by using the edge weights in the ori
 
 We see the same trends as we saw in the bipartite network: there tend to form groups/communities which contain similar topics. However, it is more visible from this plot which communities are formed. *defenc(e)* is closely related to *world*, *tax* to *pension* and *legisl(ation)*, and *eu* to *legisl(ation)* and *economi(cs)*. The plot also tells us something about pms and their neighbours. The closer the distance between two pms, the more topics of interest they share. This means that the labeled version of the plot tells us which politicians are similar to each other with regards to topic mentions (not opinions).
 
-Naturally all PM's adresses all the topics to some degree. Therefore, the thresholding when defining the network have a high impact on the structure of the network. However, as seen from the degree histrogram for the projected network, each node still have a very high average degree meaning that the network is associated with a high inter-connectedness.
+Naturally all PM's adresses all the topics to some degree. Therefore, the thresholding when defining the network have a high impact on the structure of the network. However, as seen from the degree histrogram for the projected network, each node still have a very high average degree meaning that the network is associated with a high inter- or intra-connectedness.
 
 <img src="/images/degree_hist.png" width="600" />
 
-The clustering coefficent for the projected graph is: 0.80. The clustering coefficent can be seen as a measurement for local link density in the network ([source](http://networksciencebook.com/chapter/2#clustering)). With a clustering coefficent of 0.80 it is implied that two neighbors of a certain node have 80 % chance of being connected. This is seen from the network visualisation that consists of many local, tightly connected clusters with *bridges* of PM's between them that connects them into a global structure. 
+The average clustering coefficent for the projected graph is: 0.80. This coefficent can be seen as a probability that two random nodes in the network are linked to eachother ([source](http://networksciencebook.com/chapter/2#clustering)). This is seen from the network visualisation that consists of many local, tightly connected clusters with *bridges* of PM's between them that connects them into a global node structure. Additional many links also span across the clusters, resulting in the high average clustering coefficent. 
 
 
 (Comment on network)
@@ -58,15 +58,21 @@ The clustering coefficent for the projected graph is: 0.80. The clustering coeff
 
 
 #### **Community Detection**
+In this section, we use the Louvain algorithm in order to find the best possible clusters in our network.
+
 <img src="/images/comm_size.png" width="600" />
-(Insert size of community)
+
+The size of each cluster can be seen in the barplot above. It shows us that there is not a cluster with a relatively small number of nodes. It means that the network is quite well connected because we do not see a smaller community than we do. The network can be seen below.
 
 <img src="/images/louvain_proj_mp.png" width="600" />
-(Insert image of network with louvain community annotations)
+
+It is again apparent that the communities are pretty well inter-connected, meaning that the communities are linked together with other communities very well. This can be seen in the middle of the network, where we have a mix of different communities. 
+
+Interestingly, when comparing this plot with the previous network plot, it can be seen that some of the groups we discussed earlier have been clustered together by the Louvain algorithm. For instance, community 0 consists of, among others, *health*, *pandem(ic)*, *vaccin(e)*, and *test*. 
 
 
 #### **Partition Comparison**
-The following section will compare the communities detected by the louvain algorithm with the communities created by using the edge weight between members of the Parliament and the political topics. To conduct the partition comparison, we will use the *normalized mutual information* between the two partitions. Normalized mutual information can be formalized as the following:
+The following section will compare the communities detected by the Louvain algorithm with the communities created by using the edge weight between members of the Parliament and the political topics. To conduct the partition comparison, we will use the *normalized mutual information* between the two partitions. Normalized mutual information can be formalized as the following:
 
 $$I_{n}(X;Y)=\frac{I(X;Y)}{\frac{1}{2}H(X)+\frac{1}{2}H(Y)}$$
 
