@@ -28,11 +28,16 @@ It can be seen that there are a few nodes that are not connected to anything. Th
 
 We can also see topics related to *health* by this measure include *test*, *pandem(ic)*, *vaccin(e)* and *educ(ation)*.
 
-(Write something about properties here)
+Naturally all PM's adresses all the topics to some degree. Therefore, the thresholding then defining the network have a high impact on the structure of the network. However, as seen from the degree histrogram for the projected network, each node still have a very high average degree. 
+
+<img src="/images/degree_hist.png" width="600" />
+
+The clustering coefficent for the projected graph is: 0.80. The clustering coefficent can be seen as a measurement for local link density in the network ([source](http://networksciencebook.com/chapter/2#clustering)). With a clustering coefficent of 0.80 it is implied that two neighbors of a certain node have 80 % chance of being connected. This is seen from the network visualisation that consists of many locally tightly connected clusters with *bridges* of PM's between them that connects them into a global structure. 
+
 
 ### **Projected Networks**
 <br />
-Subsequently, the projected network consisting of the members of the Parliament was determined, using the previously described approach, to model the interaction between Parliament members. The projection yielded the following network:
+Subsequently, the projected network consisting of the members of the Parliament was determined, using the previously described approach, to model the interaction between Parliament members. The projection yielded the following members of the Parliament network:
 
 <img src="/images/proj_mp.png" width="600" />
 
@@ -45,7 +50,6 @@ The annotations of each node are determined by using the edge weights in the ori
 
 
 #### **Community Detection**
-
 <img src="/images/comm_size.png" width="600" />
 (Insert size of community)
 
@@ -58,8 +62,19 @@ The following section will compare the communities detected by the louvain algor
 
 $$I_{n}(X;Y)=\frac{I(X;Y)}{\frac{1}{2}H(X)+\frac{1}{2}H(Y)}$$
 
-where X and Y are the partitions being compared and H(.) is the entropy e.g.:
+where X and Y are the partitions being compared and H(.) is the shanon entropy e.g.:
 $$H(Y)=-\sum_{x}p(y)log(p(y)))$$
+
+Mutual information gives us an estimate of how much information one would gain regarding X if we know the variable Y. However, to be able to compare the mutual information score across different partitions which may have different sizes, the estimate has to be normalized. Furthermore, the shanon entropy H(X) is an estimate of information associated with the variable X. 
+
+The calculation of normalized mutual information between the two partitions yielded:
+$$I(Louvain\ partition,\ Topics\ partition) \approx 0.29$$
+
+To determine that the estimated normalized mutual information is significant, a randomization test will be conducted. The randomization is conducted by randomly shuffling the topic partition, and the normalized mutual information between the Louvain communities and the random partition is then computed. To achieve a measure of uncertainty, the described procedure is repeated a thousand times, which yields the following illustration:
+
+(Insert randomization image here)
+
+Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm. However, it also becomes evident that not all the information of one partition can be described using the other partition. Consequently, an investigation of the topics within the detected Louvain communities could be interesting to elucidate if any pattern emerges within the community members. One approach would simply be to compute the topic distribution within each community:
 
 <img src="/images/comm_hist_0.png" width="800" />
 <img src="/images/comm_hist_1.png" width="800" />
