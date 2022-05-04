@@ -72,13 +72,25 @@ To determine that the estimated normalized mutual information is significant, a 
 
 (Insert randomization image here)
 
+(Remember to adjust the text below with results from randomization test)
 Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm. However, it also becomes evident that not all the information of one partition can be described using the other partition. Consequently, an investigation of the topics within the detected Louvain communities could be interesting to elucidate if any pattern emerges within the community members. One approach would simply be to compute the topic distribution within each community:
 
 <img src="/images/comm_hist_0.png" width="800" />
+
 <img src="/images/comm_hist_1.png" width="800" />
+
 <img src="/images/comm_hist_2.png" width="800" />
+
 <img src="/images/comm_hist_3.png" width="800" />
 
-(Insert histograms for each partition)
+Subsequently, TF-IDF can be used to generate WordClouds related to each detected community as previously done in the [text analysis section](http://localhost:1313/DanielHolmelund/the-political-debate-in-britain-illuminated-through-quantitative-methods/text-analysis/). One feasible approach for computing the TF-IDF is to group the speeches of the Parliament members, who are within the same community as a single document. Thereby, resulting in four documents, one for each community. Furthermore, the IDF is computed on the entire corpus to achieve reasonable estimates. Subsequently, the TF-IDF representations of the four documents are computed with the IDF estimate, which are computed on the entire corpus. The described approach yields the following WordClouds for each community:
 
-(Insert wordclouds for each partition)
+Community 0             |  Community 1
+:-------------------------:|:-------------------------:
+<img src="/images/wordcloud_0.png" width="600" /> | <img src="/images/wordcloud_1.png" width="600" />
+
+
+
+Community 2            |  Community 3
+:-------------------------:|:-------------------------:
+<img src="/images/wordcloud2.png" width="600" /> | <img src="/images/wordcloud3.png" width="600" />
