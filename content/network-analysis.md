@@ -42,7 +42,7 @@ Naturally all PM's adresses all the topics to some degree. Therefore, the thresh
 
 <img src="/images/degree_hist.png" width="600" />
 
-The clustering coefficent for the projected graph is: 0.80. The clustering coefficent can be seen as a measurement for local link density in the network ([source](http://networksciencebook.com/chapter/2#clustering)). With a clustering coefficent of 0.80 it is implied that two neighbors of a certain node have 80 % chance of being connected. This is seen from the network visualisation that consists of many local, tightly connected clusters with *bridges* of PM's between them that connects them into a global structure. 
+The average clustering coefficent for the projected graph is: 0.80. This coefficent can be seen as a probability that two random nodes in the network are linked to eachother ([source](http://networksciencebook.com/chapter/2#clustering)). This is seen from the network visualisation that consists of many local, tightly connected clusters with *bridges* of PM's between them that connects them into a global node structure. Additional many links also span across the clusters, resulting in the high average clustering coefficent. 
 
 #### **Community Detection**
 <img src="/images/comm_size.png" width="600" />
