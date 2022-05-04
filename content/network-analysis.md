@@ -26,8 +26,6 @@ As previously mentioned, the first step in the network modelling was to create a
 
 (Comment on network)
 
-(Write something about properties here)
-
 Naturally all PM's adresses all the topics to some degree. Therefore, the thresholding then defining the network have a high impact on the structure of the network. However, as seen from the degree histrogram for the projected network, each node still have a very high average degree. 
 
 <img src="/images/degree_hist.png" width="600" />
