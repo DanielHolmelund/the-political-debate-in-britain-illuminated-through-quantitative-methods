@@ -24,8 +24,14 @@ As previously mentioned, the first step in the network modelling was to create a
 <img src="/images/BG.png" width="600" />
 
 It can be seen that there are a few nodes that are not connected to anything. These are also known as singletons. This is because of how we assign edges. If a parliament member (pm) talks equally much about all topics, there will not be a topic of which he/she talks more about than all the other topics. Therefore, our code will not assign an edge to a topic. It is, however, possible for a pm to have more than one edge assigned to them. These nodes can be seen as "bridges" between topics in the network. These bridges will thereby connect topics which actually groups similar topics together in the network. We can for example see see *eu* and *legisl(ation)* are connected by multiple bridges and are therefore placed near each other in the network.
-
 We can also see topics related to *health* by this measure include *test*, *pandem(ic)*, *vaccin(e)* and *educ(ation)*.
+
+Naturally all PM's adresses all the topics to some degree. Therefore, the thresholding then defining the network have a high impact on the structure of the network. However, as seen from the degree histrogram for the projected network, each node still have a very high average degree. 
+
+<img src="/images/degree_hist.png" width="600" />
+
+The clustering coefficent for the projected graph is: 0.80. The clustering coefficent can be seen as a measurement for local link density in the network ([source](http://networksciencebook.com/chapter/2#clustering)). With a clustering coefficent of 0.80 it is implied that two neighbors of a certain node have 80 % chance of being connected. This is seen from the network visualisation that consists of many locally tightly connected clusters with *bridges* of PM's between them that connects them into a global structure. 
+
 
 ### **Projected Networks**
 <br />
@@ -42,6 +48,13 @@ Naturally all PM's adresses all the topics to some degree. Therefore, the thresh
 <img src="/images/degree_hist.png" width="600" />
 
 The average clustering coefficent for the projected graph is: 0.80. This coefficent can be seen as a probability that two random nodes in the network are linked to eachother ([source](http://networksciencebook.com/chapter/2#clustering)). This is seen from the network visualisation that consists of many local, tightly connected clusters with *bridges* of PM's between them that connects them into a global node structure. Additional many links also span across the clusters, resulting in the high average clustering coefficent. 
+
+
+(Comment on network)
+
+(Write something about properties here)
+
+
 
 #### **Community Detection**
 In this section, we use the Louvain algorithm in order to find the best possible clusters in our network.
@@ -67,23 +80,32 @@ $$H(Y)=-\sum_{x}p(y)log(p(y)))$$
 
 Mutual information gives us an estimate of how much information one would gain regarding X if we know the variable Y. However, to be able to compare the mutual information score across different partitions which may have different sizes, the estimate has to be normalized. Furthermore, the shanon entropy H(X) is an estimate of information associated with the variable X. 
 
-The calculation of normalized mutual information between the two partitions yielded:
-$$I(Louvain\ partition,\ Topics\ partition) \approx 0.29$$
+Given that the Louvain algorithm is stochastic to a certain degree, the detected communities may differ based on initialization. Hence, to calculate the normalized mutual information (NMI) between the Louvain partition and the topic partition with an uncertainty measure, the Louvain algorithm was executed a thousand times while determining the NMI in each repetition. The average NMI between the two partitions with a 95% confidence interval was:
+$$I(Louvain\ partition,\ Topics\ partition) = 0.30 \pm 0.001$$
 
-To determine that the estimated normalized mutual information is significant, a randomization test will be conducted. The randomization is conducted by randomly shuffling the topic partition, and the normalized mutual information between the Louvain communities and the random partition is then computed. To achieve a measure of uncertainty, the described procedure is repeated a thousand times, which yields the following illustration:
+
+To assess whether or not the estimated normalized mutual information is significant, a randomization test will be conducted. The randomization is conducted by randomly shuffling the topic partition, and the normalized mutual information between the Louvain communities and the random partition is then computed. To achieve a measure of uncertainty, the described procedure is repeated a thousand times, which yields the following illustration:
 
 (Insert randomization image here)
 
 (Remember to adjust the text below with results from randomization test)
-Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm. However, it also becomes evident that not all the information of one partition can be described using the other partition. Consequently, an investigation of the topics within the detected Louvain communities could be interesting to elucidate if any pattern emerges within the community members. One approach would simply be to compute the topic distribution within each community:
+Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm. However, it also becomes evident that not all the information of one partition can be described using the other partition. Consequently, an investigation of the topics within the detected Louvain communities could be interesting to elucidate if any pattern emerges within the community members. One approach would simply be to compute the normalized topic frequency distribution within each community:
 
 <img src="/images/comm_hist_0.png" width="800" />
 
+The topic frequency distribution within community 0 demonstrates that the majority of members are associated with the topic *health*.
+
 <img src="/images/comm_hist_1.png" width="800" />
+
+Subsequently, the frequency distribution of community 1 is mainly dominated by the topic *legislation* followed by *EU*.
 
 <img src="/images/comm_hist_2.png" width="800" />
 
+The topic frequencies within community 2 are more various, with the most frequent topics being *world*, *education*, *tax*, *economy*, *defence* and *employment*.
+
 <img src="/images/comm_hist_3.png" width="800" />
+
+Lastly, the topic distribution of community 3 demonstrates that the members of the community are mainly associated with the topic *EU*.
 
 Subsequently, TF-IDF can be used to generate WordClouds related to each detected community as previously done in the [text analysis section](http://localhost:1313/DanielHolmelund/the-political-debate-in-britain-illuminated-through-quantitative-methods/text-analysis/). One feasible approach for computing the TF-IDF is to group the speeches of the Parliament members, who are within the same community as a single document. Thereby, resulting in four documents, one for each community. Furthermore, the IDF is computed on the entire corpus to achieve reasonable estimates. Subsequently, the TF-IDF representations of the four documents are computed with the IDF estimate, which are computed on the entire corpus. The described approach yields the following WordClouds for each community:
 
