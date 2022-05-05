@@ -3,6 +3,7 @@ title: Introduction
 layout: single
 next: data-description
 ---
+# **Why Should You Read This Website?**
 
 One of the perks about democratic society is the idea that the people can hold their elected officials accountable. This, however, can get pretty problematic when each politician have their own opinions on most topics; who says what, and why?
 

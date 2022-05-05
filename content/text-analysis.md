@@ -3,7 +3,7 @@ title: Text analysis
 prev: data-description
 next: network-analysis
 ---
-**Analysing Speeches From Each Party**
+# **Analysing Speeches From Each Party**
 <br />
 The following section will attempt to analyse the speeches conducted by each political party by finding descriptive and informative words from the transcripts. Initially, all the transcripts in the corpus were grouped by political party resulting in 47 documents corresponding to each party. The approach of the analysis stems from a simple idea, counting. More specifically, to discover descriptive words associated with the 47 documents, the frequency of occurence for each term will be computed, also refered to as term-frequency. Thereby, constructing a term-document matrix which essentially is a table where each row corresponds to a document, each column corresponds to a term, and the value corresponds to the term-frequency. An example of a term-document matrix could be as follows:
 
