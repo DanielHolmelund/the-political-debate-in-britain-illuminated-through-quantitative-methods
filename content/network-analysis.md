@@ -58,13 +58,9 @@ Interestingly, when comparing this plot with the previous network plot, it can b
 
 
 #### **Partition Comparison**
-<<<<<<< HEAD
-The following section compares the communities detected by the Louvain algorithm with the communities created by using the edge weight between PMs and the political topics. To conduct the partition comparison, we will use the *normalised mutual information* between the two partitions. Normalised mutual information can be formalised as follows:
-=======
 The following section will compare the communities detected by the Louvain algorithm with the communities created by using the edge weight between members of the Parliament and the political topics. More specifically, a topic partition will be made, by using the edge weights in the original bipartite network and then annotating each Parliament member with the topic associated with the highest edge weight, as in the first illustration of the network.
 
 To conduct the partition comparison, we will use the *normalized mutual information* between the two partitions. Normalized mutual information can be formalized as the following:
->>>>>>> 65717b6310afe923959fd6d56180138c6d63eabc
 
 $$I_{n}(X;Y)=\frac{I(X;Y)}{\frac{1}{2}H(X)+\frac{1}{2}H(Y)}$$
 

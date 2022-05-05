@@ -5,7 +5,7 @@ relativeURLs = true
 theme = "theme" 
 [params]
     authors = ["Daniel Holmelund", "Christian Djurhuus", "Felix Burmester"]
-    notebook = "/explainer-notebook.html"
+    notebook = "/Explainer_notebook.html"
     data = "https://www.clarin.si/repository/xmlui/handle/11356/1432"
     github = "https://github.com/DanielHolmelund/the-political-debate-in-britain-illuminated-through-quantitative-methods"
     [[params.nav]]
