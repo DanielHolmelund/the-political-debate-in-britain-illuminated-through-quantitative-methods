@@ -21,7 +21,7 @@ The temporal text analysis demonstrated that topics addressed in the Parliament 
 
 It was demonstrated that sentiment as a raw metric does not yield any great insight into the tone of the political debate, or reflect if big events, that require extra political attention, have occurred. This is due to the general formal language in these political debates being performed and the dictionary-based method that was demonstrated can't detect these small fluctuations in language. 
 
-Wordshifts were demonstrated to be a more useful metric in this context that can reveal word-based fluctuations over a small time period. With wordshifts, both major events were illuminated and the politician's word was used around these topics. 
+Wordshifts were demonstrated to be a more useful metric in this context that can reveal word-based fluctuations over a small time period. With wordshifts, both major events were illuminated and the politicians' word used around these topics. 
 
 # How can text-mining and network science approaches be combined to provide a holistic understanding of potential political communities and the topics discussed within a community?
 
