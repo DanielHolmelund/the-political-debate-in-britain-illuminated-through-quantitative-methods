@@ -10,18 +10,18 @@ This project will focus on quantatively analysing the discourse and debate in Br
 
 <img src="/images/Plotly_month.gif" width="1000" />
 
-(Disclaimer: In the above plot the values out from the bars have no meaning in relation. The x-axis describes the normalized frequency of topics)
+**Disclaimer:** In the plot above, the values on the bars have no meaning in relation. The x-axis describes the normalised frequency of topics.
 
-To fulfill the purpose of this analysis the following research questions will be adressed:
+To fulfill this analysis the following research questions will be adressed:
 
-* How can the political activity at the British Parliament be modelled as a network?
+* What insights can be obtained from using traditional text-mining methods such as TF-IDF?
+* How can the political activity in the British Parliament be modelled as a network?
 * What insights can be obtained from using a network science approach?
-* What insights can be obtained from using traditional text-mining methods such as TF-IDF and LDA?
 * How can text-mining and network science approaches be combined to provide a holistic understanding of potential political communities and the topics discussed within a community?
 
-The following sections will be a high-level presentation of the insights gained when applying different analytic methods to the data obtained from the two Parliament houses in the UK. For a more in-depth and under the hood explanation of the project please refer to our [Explainer Notebook](explainer-notebook.html).
+In the following sections there will be a high-level presentation of the insights gained from applying different analytical methods to the data obtained from the two Parliament houses in the United Kingdom. For a more in-depth and under the hood explanation of the project we refer you to our [Explainer Notebook](explainer-notebook.html).
 
-For a breif introduction to the purpose and scope for this project check out the following pitch:
+For a breif introduction to the purpose and scope for this project check out the following video-pitch:
 
 <iframe
     width="640"
