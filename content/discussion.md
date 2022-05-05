@@ -24,4 +24,4 @@ Sentiment
 
 # How can text-mining and network science approaches be combined to provide a holistic understanding of potential political communities and the topics discussed within a community?
 
-Using approaches from the network science field, it was possible to discover communities of members within the British Parliament. Furthermore, using TF-IDF, it was possible to discover important words associated with each community. Hence, by combining the methods from the two fields, it was possible to find communities in the network and subsequently try to understand the topics. 
+Using approaches from the network science field, it was possible to discover communities of members within the British Parliament. Furthermore, using TF-IDF, it was possible to discover important words associated with each community. Hence, by combining the methods from the two fields, it was possible to find communities in the network and subsequently try to understand the topics associated with the community. 
