@@ -17,4 +17,7 @@ theme = "theme"
     [[params.nav]]
         label = "Network"
         link = "/network-analysis"
+    [[params.nav]]
+        label = "Discussion"
+        link = "/discussion"
 

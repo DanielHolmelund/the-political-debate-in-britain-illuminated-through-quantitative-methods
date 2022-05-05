@@ -1,5 +1,5 @@
 ---
-title: Home Page
+title: Introduction
 layout: single
 next: data-description
 ---
