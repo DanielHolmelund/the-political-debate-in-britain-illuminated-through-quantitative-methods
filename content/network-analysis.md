@@ -1,6 +1,7 @@
 ---
 title: Network analysis
 prev: data-description
+next: summary
 ---
 
 # **Network Analysis of the British Parliament Speeches**
@@ -57,7 +58,9 @@ Interestingly, when comparing this plot with the previous network plot, it can b
 
 
 #### **Partition Comparison**
-The following section will compare the communities detected by the Louvain algorithm with the communities created by using the edge weight between members of the Parliament and the political topics. To conduct the partition comparison, we will use the *normalized mutual information* between the two partitions. Normalized mutual information can be formalized as the following:
+The following section will compare the communities detected by the Louvain algorithm with the communities created by using the edge weight between members of the Parliament and the political topics. More specifically, a topic partition will be made, by using the edge weights in the original bipartite network and then annotating each Parliament member with the topic associated with the highest edge weight, as in the first illustration of the network.
+
+To conduct the partition comparison, we will use the *normalized mutual information* between the two partitions. Normalized mutual information can be formalized as the following:
 
 $$I_{n}(X;Y)=\frac{I(X;Y)}{\frac{1}{2}H(X)+\frac{1}{2}H(Y)}$$
 
@@ -75,7 +78,7 @@ To assess whether or not the estimated normalized mutual information is signific
 <img src="/images/NMIs.png" width="600" />
 
 
-Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm and that estimated normalized mutual information is statistically significant from zero. However, it also becomes evident that not all the information of one partition can be described using the other partition. Hence, an interesting question to ask could be what community structure describes the true nature of the network structure best?
+Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm and that thegi estimated normalized mutual information is statistically significant from zero. However, it also becomes evident that not all the information of one partition can be described using the other partition. Hence, an interesting question to ask could be what community structure describes the true nature of the network structure best?
 <br />
 
 To address this question modularity Q can be used. Modularity is a measure of how well a partition properly separates the network into communities. The estimated modularity of the two partitions was:
