@@ -7,7 +7,7 @@ prev: network-analysis
 Before the analysis was conducted, four research question was raised. The following section will summaries the findings related to each of the research questions.
 
 # How can the political activity at the British Parliament be modelled as a network?
-One approach to model the political activity using the transcripts is to initially create a bipartite network between members of the Parliament and Topics which they care about. Subsequently, to model the relationship between Parliament members, one can project the bipartite graph. The results of the network analysis yield that the described approach is a possible solution for how to model political activity using networks. However, an issue with the approach is that the relationships between Parliament members only rely on the topics they have in common. Furthermore, it could be discussed whether or not the usage of topics as a proxy measure for political activity is justifiable.
+One approach to model the political activity using the transcripts is to initially create a bipartite network between members of the Parliament and Topics which they care about. Subsequently, to model the relationship between Parliament members, one can project the bipartite graph. The results of the network analysis yield that the described approach is a possible solution for how to model political activity using networks. However, an issue with the approach is that the relationships between Parliament members only rely on the topics they have in common. Hence, it could be discussed whether or not the usage of topics as a proxy measure for political activity is justifiable, and if a different measure would have been better.
 
 # What insights can be obtained from using a network science approach?
 
@@ -25,4 +25,4 @@ Wordshifts were demonstrated to be a more useful metric in this context that can
 
 # How can text-mining and network science approaches be combined to provide a holistic understanding of potential political communities and the topics discussed within a community?
 
-Using approaches from the network science field, it was possible to discover communities of members within the British Parliament. Furthermore, using TF-IDF, it was possible to discover important words associated with each community. Hence, by combining the methods from the two fields, it was possible to find communities in the network and subsequently try to understand the topics. 
+Using approaches from the network science field, it was possible to discover communities of members within the British Parliament. Furthermore, using TF-IDF, it was possible to discover important words associated with each community. Hence, by combining the methods from the two fields, it was possible to find communities in the network and subsequently try to understand the topics associated with the community. 
