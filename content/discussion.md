@@ -31,4 +31,6 @@ Wordshifts were demonstrated to be a more useful metric in this context because 
 
 Using approaches from the network science field, it was possible to discover communities of members within the British Parliament. Furthermore, using TF-IDF, it was possible to discover important words associated with each community. Hence, by combining the methods from the two fields, it was possible to find communities in the network and subsequently understand the topics associated with the communities.
 
- 
+ Overall this project was a:
+
+<img src="/images/great-success-yes.gif" width="800" />
