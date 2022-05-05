@@ -1,6 +1,7 @@
 ---
 title: Network analysis
 prev: data-description
+next: discussion
 ---
 
 # **Network Analysis of the British Parliament Speeches**
@@ -114,5 +115,5 @@ Community 2            |  Community 3
 :-------------------------:|:-------------------------:
 <img src="/images/wordcloud_2.png" width="600" /> | <img src="/images/wordcloud_3.png" width="600" />
 
-Community 2 is the mixed community, and that shows in its WordCloud. Words like *import*, *countri(es)*, and *local* seem to fit topics like *economi(cs)*, *world*, and *educ(ation)*. Finally, we see community 3 which mostly contains the topic, *eu*. It contains words like *eu*, *trade*, *vote* and *import*.
+Community 2 is the mixed community, and that shows in its WordCloud. Words like *import*, *countri(es)*, and *local* seem to fit topics like *economi(cs)*, *world*, and *educ(ation)*. Finally, we see community 3 which mostly contains the topic, *eu*. It contains words like *eu*, *trade*, *vote* and *import*. Community is also related to Brexit due to the central word *deal*, which was used in context to UK's Brexit strategy. 
 
