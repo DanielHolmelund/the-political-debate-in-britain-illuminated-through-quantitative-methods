@@ -78,7 +78,7 @@ To assess whether or not the estimated normalized mutual information is signific
 <img src="/images/NMIs.png" width="600" />
 
 
-Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm and that thegi estimated normalized mutual information is statistically significant from zero. However, it also becomes evident that not all the information of one partition can be described using the other partition. Hence, an interesting question to ask could be what community structure describes the true nature of the network structure best?
+Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm and that the estimated normalized mutual information is statistically significant from zero. However, it also becomes evident that not all the information of one partition can be described using the other partition. Hence, an interesting question to ask could be what community structure describes the true nature of the network structure best?
 <br />
 
 To address this question modularity Q can be used. Modularity is a measure of how well a partition properly separates the network into communities. The estimated modularity of the two partitions was:
