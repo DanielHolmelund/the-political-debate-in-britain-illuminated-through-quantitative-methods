@@ -4,7 +4,9 @@ layout: single
 next: data-description
 ---
 
-The political system itself is built upon a very complicated system with a lot of different actors that all have their own agendas. A place where key figures of this system clash, discuss their idea and try to enforce their ideology and political beliefs is the Parliament. Therefore this project will try to explore these complex networks of interactions. This will mainly be done through a toolbox consisting of text analysis of the PM's statements in the British Parliament and network analysis.
+One of the perks about democratic society is the idea that the people can hold their elected officials accountable. This, however, can get pretty problematic when each politician have their own opinions on most topics; who says what, and why?
+
+This project will focus on quantatively analysing the discourse and debate in British parliament. We will investigate frequently discussed topics in political parties, the similarity between these parties, and the interactions between political actors. The former will be done through natural language processing - or text analysis - and the latter through network analysis.
 
 <img src="/images/Plotly_month.gif" width="1000" />
 
