@@ -42,13 +42,6 @@ Naturally, all pms adress all the topics to some degree. Therefore, the threshol
 
 The average clustering coefficent for the projected graph is: 0.80. This coefficent can be seen as a probability that two random nodes in the network are linked to eachother ([source](http://networksciencebook.com/chapter/2#clustering)). This is seen from the network visualisation that consists of many local, tightly connected clusters with *bridges* of pms between them that connects them into a global node structure. Additional many links also span across the clusters, resulting in the high average clustering coefficent. 
 
-
-(Comment on network)
-
-(Write something about properties here)
-
-
-
 #### **Community Detection**
 In this section, we use the Louvain algorithm in order to find the best possible clusters in our network.
 
@@ -77,20 +70,28 @@ Given that the Louvain algorithm is stochastic to a certain degree, the detected
 $$mean(I(Louvain\ partition,\ Topics\ partition)) = 0.30 \pm 0.001$$
 
 
-To assess whether or not the estimated normalized mutual information is significant, a randomization test will be conducted. The randomization is conducted by randomly shuffling the topic partition, and the normalized mutual information between the Louvain communities and the random partition is then computed. To achieve a measure of uncertainty, the described procedure is repeated a thousand times, which yields the following illustration:
+To assess whether or not the estimated normalized mutual information is significant, a randomisation test will be conducted. The randomization is conducted by randomly shuffling the topic partition, and the normalised mutual information between the Louvain communities and the random partition is then computed. To achieve a measure of uncertainty, the described procedure is repeated a thousand times, which yields the following illustration:
 
-(Insert randomization image here)
+<img src="/images/NMIs.png" width="600" />
 
-(Remember to adjust the text below with results from randomization test)
-Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm. However, it also becomes evident that not all the information of one partition can be described using the other partition. Consequently, an investigation of the topics within the detected Louvain communities could be interesting to elucidate if any pattern emerges within the community members. One approach would simply be to compute the normalized topic frequency distribution within each community:
+
+Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm and that estimated normalized mutual information is statistically significant from zero. However, it also becomes evident that not all the information of one partition can be described using the other partition. Hence, an interesting question to ask could be what community structure describes the true nature of the network structure best? To address this question modularity Q can be used. Modularity is a measure of how well a partition properly separates the network into communities. The estimated modularity of the two partitions was:
+
+$$Q_{Louvain} \approx 0.27$$
+$$Q_{Topic} \approx 0.16$$
+
+Hence, the estimated modularities yield that the Louvain algorithm partition is associated with higher modularity, which entails that the detected community structure by the Louvain algorithm is more appropriate to the true nature of the network structure than the topic partition.
+
+
+Consequently, an investigation of the topics within the detected Louvain communities could be interesting to elucidate if any interesting patterns and similiarites emerge among the community members. One approach would simply be to compute the normalized topic frequency distribution within each community:
 
 <img src="/images/comm_hist_0.png" width="800" />
 
-The topic frequency distribution within community 0 demonstrates that the majority of members are associated with the topic *health*.
+As mentioned before, community 0 consists of *health*-related topics such as *vaccin(e)*, *test* and *pandem(ic)*.
 
 <img src="/images/comm_hist_1.png" width="800" />
 
-Subsequently, the frequency distribution of community 1 is mainly dominated by the topic *legislation* followed by *EU*.
+Subsequently, the frequency distribution of community 1 is mainly dominated by the topic *legislation* followed by *EU* which probably corresponds to the large mixed cluster in the previous network plot.
 
 <img src="/images/comm_hist_2.png" width="800" />
 
@@ -100,14 +101,19 @@ The topic frequencies within community 2 are more various, with the most frequen
 
 Lastly, the topic distribution of community 3 demonstrates that the members of the community are mainly associated with the topic *EU*.
 
-Subsequently, TF-IDF can be used to generate WordClouds related to each detected community as previously done in the [text analysis section](http://DanielHolmelund/the-political-debate-in-britain-illuminated-through-quantitative-methods/text-analysis/). One feasible approach for computing the TF-IDF is to group the speeches of the Parliament members, who are within the same community as a single document. Thereby, resulting in four documents, one for each community. Furthermore, the IDF is computed on the entire corpus to achieve reasonable estimates. Subsequently, the TF-IDF representations of the four documents are computed with the IDF estimate, which are computed on the entire corpus. The described approach yields the following WordClouds for each community:
+
+Subsequently, TF-IDF can be used to generate WordClouds related to each detected community as previously done in the [text analysis section](http://localhost:1313/DanielHolmelund/the-political-debate-in-britain-illuminated-through-quantitative-methods/text-analysis/). One feasible approach for computing the TF-IDF is to group the speeches of the Parliament members, who are within the same community as a single document. Thereby, resulting in four documents, one for each community. Furthermore, the IDF is computed on the entire corpus to achieve reasonable estimates. Subsequently, the TF-IDF representations of the four documents are computed with the IDF estimate, which is computed on the entire corpus. The described approach yields the following WordClouds for each community:
+
 
 Community 0             |  Community 1
 :-------------------------:|:-------------------------:
 <img src="/images/wordcloud_0.png" width="600" /> | <img src="/images/wordcloud_1.png" width="600" />
 
-
+Here we see words like *health*, *care*, *servic(e)* and *state* in the WordCloud for community 0 which sound like they fit the overall *health care* theme. Community 1 consists of words like *legisl(ation)*, *eu* and *law* which also seems to fit the *legislation / eu* theme.
 
 Community 2            |  Community 3
 :-------------------------:|:-------------------------:
 <img src="/images/wordcloud_2.png" width="600" /> | <img src="/images/wordcloud_3.png" width="600" />
+
+Community 2 is the mixed community, and that shows in its WordCloud. Words like *import*, *countri(es)*, and *local* seem to fit topics like *economi(cs)*, *world*, and *educ(ation)*. Finally, we see community 3 which mostly contains the topic, *eu*. It contains words like *eu*, *trade*, *vote* and *import*.
+
