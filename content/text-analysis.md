@@ -43,7 +43,7 @@ Labour             |  Scottish National Party
 
 Some of the political values associated with the Labour Party are also reflected. For instance, the presence of words such as *School* and *Pension* aligns with their socialistic ideology. The Scottish National Party is also associated with quite some interesting terms in the above WordCloud. For instance, the word devolution, which is commonly used to address a greater level of self-government of the Scottish Parliament.
 
-UK Independence Party             |  Green Pary
+UK Independence Party             |  Green Party
 :-------------------------:|:-------------------------:
 <img src="/images/wordcloudUK Independence Party.png" width="600" /> | <img src="/images/wordcloudGreen Party.png" width="600" />
 
@@ -51,7 +51,7 @@ Furthermore, the UK Independence Party is frequently described as a relatively e
 <br />
 Lastly, the Green Party is known for its environmental ideology and its progressive approach toward animal rights, which is reflected by words in the WordCloud such as *Environment*, *Animal* and *Climate*.
 
->Hence, the selected WordClouds demonstrate that the political parties are, in fact, addressing their proclaimed core values within the British Parliament. 
+Hence, the selected WordClouds demonstrate that the political parties are, in fact, addressing their proclaimed core values within the British Parliament. 
 
 **Similarity Between Parties (TF-IDF & Cosine Similarity)**
 
@@ -93,7 +93,7 @@ Initially, the topics' evolution will be illustrated using an altered version of
 
 <img src="/images/LexicalDispersionPlot.png" width="600" />
 
-The size of each marker in the illustration corresponds to how frequent a topic has been mentioned on the specific day. Hence, the visualization demonstrates that the frequency of some topics are somewhat constant while others are associated with a higher variance. For instance, the frequency of the topic *vaccine* appears to have had an increase during the end of 2020, while topics such *health* and *eu* are associated with a constant high frequency. 
+The size of each marker in the illustration corresponds to how frequent a topic has been mentioned on the specific day. Hence, the visualization demonstrates that the frequency of some topics are somewhat constant while others are associated with a higher variance. For instance, the frequency of the topic *vaccine* appears to have had an increase during the end of 2020, while topics such *health* and *eu* are associated with a constant high frequency.
 
 Subsequently, the variation of frequencies will be investigated throughout the entire timeframe in the corpus (2015-2021). Furthermore, we decided to conduct stemming on the topics to ensure that different inflexions of the topics map to the same topic. Thus, we counted the frequency of each topic for a given month and normalised the frequency according to the sum of the topic frequencies of that given month. The frequencies are illustrated in the following illustration, where each point in the plot corresponds to a normalised topic frequency:
 
