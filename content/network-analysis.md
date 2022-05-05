@@ -1,7 +1,6 @@
 ---
 title: Network analysis
 prev: data-description
-next: discussion
 ---
 
 # **Network Analysis of the British Parliament Speeches**
@@ -76,12 +75,15 @@ To assess whether or not the estimated normalized mutual information is signific
 <img src="/images/NMIs.png" width="600" />
 
 
-Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm and that estimated normalized mutual information is statistically significant from zero. However, it also becomes evident that not all the information of one partition can be described using the other partition. Hence, an interesting question to ask could be what community structure describes the true nature of the network structure best? To address this question modularity Q can be used. Modularity is a measure of how well a partition properly separates the network into communities. The estimated modularity of the two partitions was:
+Thus, the partition comparison yields that there is some shared information between the topic partition and the detected communities of the Louvain algorithm and that estimated normalized mutual information is statistically significant from zero. However, it also becomes evident that not all the information of one partition can be described using the other partition. Hence, an interesting question to ask could be what community structure describes the true nature of the network structure best?
+<br />
+
+To address this question modularity Q can be used. Modularity is a measure of how well a partition properly separates the network into communities. The estimated modularity of the two partitions was:
 
 $$Q_{Louvain} \approx 0.27$$
 $$Q_{Topic} \approx 0.16$$
 
-Hence, the estimated modularities yield that the Louvain algorithm partition is associated with higher modularity, which entails that the detected community structure by the Louvain algorithm is more appropriate to the true nature of the network structure than the topic partition.
+Hence, the estimated modularities yield that the Louvain algorithm partition is associated with a higher modularity, which entails that the detected community structure by the Louvain algorithm is more appropriate to the true nature of the network structure than the topic partition.
 
 
 Consequently, an investigation of the topics within the detected Louvain communities could be interesting to elucidate if any interesting patterns and similiarites emerge among the community members. One approach would simply be to compute the normalized topic frequency distribution within each community:
@@ -116,5 +118,9 @@ Community 2            |  Community 3
 :-------------------------:|:-------------------------:
 <img src="/images/wordcloud_2.png" width="600" /> | <img src="/images/wordcloud_3.png" width="600" />
 
-Community 2 is the mixed community, and that shows in its WordCloud. Words like *import*, *countri(es)*, and *local* seem to fit topics like *economi(cs)*, *world*, and *educ(ation)*. Finally, we see community 3 which mostly contains the topic, *eu*. It contains words like *eu*, *trade*, *vote* and *import*. Community is also related to Brexit due to the central word *deal*, which was used in context to UK's Brexit strategy. 
+Community 2 is the mixed community, and that shows in its WordCloud. Words like *import*, *countri(es)*, and *local* seem to fit topics like *economi(cs)*, *world*, and *educ(ation)*. Finally, we see community 3 which mostly contains the topic, *eu*. It contains words like *eu*, *trade*, *vote* and *import*.
+
+The findings of the analysis demonstrate that using methods from the network science field, it is possible to discover communities of members within the British Parliament. Furthermore, when combining the network science methods with simple text analysis tools, it becomes feasible to try and understand the communities in terms of which words are important for each community. The political finding that a member of the Parliament tends to address topics which are similar e.g. *EU* and *legislation*, may be unsurprising. However, being able quantitatively to verify or falsify our assumptions of the workings and nature of politics may still prove to be useful.
+
+
 
