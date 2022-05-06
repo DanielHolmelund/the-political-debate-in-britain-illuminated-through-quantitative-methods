@@ -1,7 +1,7 @@
 ---
 title: Network analysis
 prev: data-description
-next: summary
+next: discussion
 ---
 
 # **Network Analysis of the British Parliament Speeches**
