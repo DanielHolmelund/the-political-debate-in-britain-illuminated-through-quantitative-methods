@@ -20,7 +20,7 @@ To fulfill this analysis the following research questions will be adressed:
 * What insights can be obtained from using a network science approach?
 * How can text-mining and network science approaches be combined to provide a holistic understanding of potential political communities and the topics discussed within a community?
 
-In the following sections there will be a high-level presentation of the insights gained from applying different analytical methods to the data obtained from the two Parliament houses in the United Kingdom. For a more in-depth and under the hood explanation of the project we refer you to our [Explainer Notebook](explainer-notebook.html).
+In the following sections there will be a high-level presentation of the insights gained from applying different analytical methods to the data obtained from the two Parliament houses in the United Kingdom. For a more in-depth and under the hood explanation of the project we refer you to our [Explainer Notebook](Explainer_notebook.html).
 
 For a breif introduction to the purpose and scope for this project check out the following video-pitch:
 
